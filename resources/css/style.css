@@ -1,0 +1,62 @@
+/***************************
+********* Basic ************
+***************************/
+
+* {
+    font-size: 18px;
+    text-align: center;
+}
+
+body {
+    min-height: 101vh;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    background-color: aliceblue;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.7rem;
+}
+
+/***************************
+**** HEADER - SECTION  *****
+***************************/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+/***************************
+******* MAIN -SECTION*******
+***************************/
+
+
+
+
+/***************************
+***** FOOTER - SECTION *****
+***************************/
+
+footer {
+    position: fixed;
+    position: sticky;
+    top: 100%;
+    background-color: antiquewhite;
+    margin-top: 20px;
+}
+
+footer p {
+    text-align: left;
+    padding: 20px;
+}
