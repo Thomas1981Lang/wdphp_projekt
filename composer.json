@@ -1,0 +1,8 @@
+{
+    "name": "t_l/wdphp",
+    "description": "php project",
+    "type": "php project",
+    "require": {
+        "bcosca/fatfree": "^3.6"
+    }
+}
