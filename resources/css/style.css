@@ -1,21 +1,39 @@
+/*****************************
+*********COLOR in USE*********
+******************************
+dark:
+background-color: #141414;
+color: #ebebeb;
+text-shadow: red, black;
+
+******************************
+*********COLOR in USE*********
+*****************************/
+
+
+
+
 /***************************
 ********* Basic ************
 ***************************/
 
 * {
     font-size: 18px;
-    text-align: center;
 }
 
 body {
     min-height: 101vh;
     width: 100%;
     font-family: 'Open Sans', sans-serif;
-    background-color: aliceblue;
+    background-color: #ebebeb;
+    color: #141414;
+
 }
 
 h1 {
+    font-family: 'Roboto', sans-serif;
     font-size: 3rem;
+
 }
 
 h2 {
@@ -31,17 +49,139 @@ h3 {
 ***************************/
 
 header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     text-align: center;
-    background-color: antiquewhite;
+    background-color: black;
+    color: #ebebeb;
+    height: 130px;
+    border-bottom: 1px solid #ebebeb;
 }
 
+.mobile_nav,
+.mobile_login {
+    display: none;
+}
+
+.title {
+    font-size: 3.5em;
+    font-family: 'Lobster', cursive;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, -2px 0 6px red, 0 0 6px red, 0 0 6px red, 0 -2px 6px red;
+    padding-bottom: 15px;
+}
+
+.slogan {
+    font-size: 1.5em;
+    padding-left: 20px;
+    text-shadow: 0 0 3px gray, 0 1px 1px gray, 1px 0 1px gray, 1px 1px gray;
+}
+
+.nav_desktop span a{
+    text-decoration: none;
+    font-size: 1.7rem;
+    text-align: left;
+    padding: 23px;
+}
+
+.nav_desktop a{
+    color: #ebebeb;
+    text-decoration: none;
+}
+
+.nav_desktop .active
+{
+    background-color: #ebebeb;
+    color: #141414;
+    padding: 44px 23px 46px;
+    /*box-shadow: -1px -1px 4px gray;*/
+}
+
+.nav_desktop span a:hover {
+    background-color: #cbcbcb;
+    color: #141414;
+    padding: 44px 23px 46px;
+}
 /***************************
 ******* MAIN -SECTION*******
 ***************************/
 
+.hero {
 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top:190px;
+    padding-bottom: 80px;
+    height: 100vh;
+    /*height: calc(101vmin - 130px - 60px);*/
+    background-image: url("../img/andrew-welch-229148-unsplash_cr.jpg");
+    background-position: right center ;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: black;
+
+}
+
+
+.hero_block {
+    padding: 80px;
+    margin-left: 20px;
+    z-index: 0;
+    width: 412px;
+    background-color: #ffffff;
+    line-height: 2.5rem;
+    box-shadow: 10px 10px 10px #141414;
+    border-radius:  20px 20%  30px 20% ;
+}
+
+.hero_block h2 {
+    padding-bottom: 30px;
+}
+
+.app {
+    padding-top: 190px;
+    padding-bottom: 60px;
+    background-color: black;
+    text-align: center;
+}
+
+.app h1,
+.app h2{
+    color: #ebebeb;
+    padding-bottom: 30px;
+}
+
+.app video {
+    padding: 40px;
+}
+
+.app_pic {
+    width: 750px;
+    padding-bottom: 40px;
+}
+
+.app_text {
+    color: #ebebeb;
+    padding: 0 50px 50px 50px;
+}
+
+.app_symbole {
+    width: 40px;
+    padding-bottom: 20px;
+}
+@media only screen and (max-height: 630px) {
+    /*main {*/
+        /*height: 100%;*/
+    /*}*/
+
+    footer {
+        position: static;
+    }
+}
 
 
 /***************************
@@ -49,14 +189,30 @@ header {
 ***************************/
 
 footer {
+    z-index: 5;
+    display: flex;
+    justify-content: space-between ;
     position: fixed;
     position: sticky;
     top: 100%;
-    background-color: antiquewhite;
-    margin-top: 20px;
+    background-color: black;
+    color: #ebebeb;
+
+    height: 60px;
+    border-top: 1px solid white;
 }
 
 footer p {
     text-align: left;
+    padding: 20px 0 20px 20px;
+}
+
+footer p span{
+
     padding: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ebebeb;
 }
