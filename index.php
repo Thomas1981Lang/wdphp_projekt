@@ -1,21 +1,22 @@
 <?php
 
-//require_once("vendor/autoload.php");
-//
-//$f3 = \Base::instance();
-//
-//$f3->route('GET /',
-//    function () {
-//        echo 'Hello World!';
-//    }
-//);
-//
-//$f3->run();
+require_once("vendor/autoload.php");
 
-$f3 = require('vendor/bcosca/fatfree/lib/base.php');
-$f3->route('GET /',
-    function() {
-        echo 'Hello, world!';
+$f3 = \Base::instance();
+
+class Main {
+    function render() {
+        echo 'Hello world';
     }
-);
+
+    function sayhello() {
+        echo 'hallo babe';
+    }
+}
+
+
+$f3->route('GET /','Main->render');
+$f3->route(GET /hello, 'Main->sayhello');
+
 $f3->run();
+
