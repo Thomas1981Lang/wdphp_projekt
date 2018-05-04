@@ -5,8 +5,8 @@
     <title>SINGLES A LA CARTE</title>
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="resources/css/reset.css">
-    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="/app/resources/css/reset.css">
+    <link rel="stylesheet" href="/app/resources/css/style.css">
 </head>
 <body>
 <header>
