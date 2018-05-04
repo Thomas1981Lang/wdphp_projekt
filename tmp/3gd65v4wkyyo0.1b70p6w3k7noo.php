@@ -21,7 +21,8 @@ ddfgsfgsdfg
     <h2 class="slogan">für Singles die wissen wo etwas passiert</h2>
     </div>
 
-    <div class="nav_desktop"><span><a href="/" class="active">Home</a></span><span><a href="/apps">App</a></span><span><a href="">Sign In</a></span><span><a href="">Login</a></span></div>
+    <div class="nav_desktop"><span><a href="/" class="active">Home</a></span><span><a href="/app">App</a></span><span><a href="">Sign In</a></span><span><a
+            href="">Login</a></span></div>
 
 
     <div class="mobile_login">

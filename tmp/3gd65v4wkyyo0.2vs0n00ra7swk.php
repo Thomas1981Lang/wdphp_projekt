@@ -21,7 +21,7 @@
         <h2 class="slogan">für Singles die wissen wo was passiert</h2>
     </div>
 
-    <div class="nav_desktop"><span><a href="/" >Home</a></span><span><a href="/apps" class="active">App</a></span><span><a
+    <div class="nav_desktop"><span><a href="/" >Home</a></span><span><a href="/app" class="active">App</a></span><span><a
             href="">Sign In</a></span><span><a
             href="">Login</a></span></div>
 
@@ -41,16 +41,16 @@
         <a href="#">Download Singles to Go (Coming soon&excl;)</a>
     </section>
     <!--    MAIN Section    -->
-    <video src="/app/resources/videos/singletogo.mp4" autoplay loop>
+    <video src="../resources/videos/singletogo.mp4" autoplay loop>
         Your browser does not support the video tag.
     </video>
 
     <h2>Dein eigener Reiseführer zu den heißesten Abenteuern</h2>
     <p class="app_text">Singles to Go erinnert sich an Plätze und Singles die du magst und schlägt dir neue 'Points of Interest' in deiner Nähe vor.</p>
 
-    <p><img class="app_pic" src="/app/resources/img/aranxa-esteve-130749-unsplash.jpg" alt="Picture of a tent in the Desert"></p>
+    <p><img class="app_pic" src="../resources/img/aranxa-esteve-130749-unsplash.jpg" alt="Picture of a tent in the Desert"></p>
 
-    <p><img class="app_symbole" src="/app/resources/img/phone.png" alt="Smartphone Icon"></p>
+    <p><img class="app_symbole" src="../resources/img/phone.png" alt="Smartphone Icon"></p>
 
     <h2 class="app_slogan">Bald für iPhone und Android erhältlich</h2>
     <a href="#">Download Singles to Go (Coming soon&excl;)</a>
