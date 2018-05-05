@@ -22,8 +22,8 @@
     </div>
 
     <div class="nav_desktop"><span><a href="/" >Home</a></span><span><a href="/apps" class="active">App</a></span><span><a
-            href="">Sign In</a></span><span><a
-            href="">Login</a></span></div>
+            href="/signin">Sign In</a></span><span><a
+            href="/login">Login</a></span></div>
 
 
     <div class="mobile_login">
