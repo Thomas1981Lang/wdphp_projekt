@@ -1,6 +1,7 @@
 <?php
 
-class MainController extends Controller {
+class MainController extends Controller
+{
 
     function beforeroute()
     {
@@ -8,12 +9,14 @@ class MainController extends Controller {
     }
 
 
-    function render() {
+    function render()
+    {
         $home = new Template;
         echo $home->render('home.html');
     }
 
-    function app() {
+    function app()
+    {
         $app = new Template;
         echo $app->render('app.html');
     }

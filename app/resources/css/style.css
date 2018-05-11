@@ -8,7 +8,7 @@
 dark:
 background-color: #141414;
 color: #ebebeb;
-text-shadow: red, black;
+text-shadow: red, black, gray;
 
 
 /************************************************
@@ -26,13 +26,13 @@ text-shadow: red, black;
 ****************           **********************
 ************************************************/
 
-
 * {
     box-sizing: border-box;
     font-size: 18px;
 }
 
 html, body {
+    height: 100%; /* unlogisch */
     min-height: 100vh;
 }
 
@@ -58,23 +58,30 @@ h3 {
     font-size: 1.7rem;
 }
 
+main {
+    min-height: calc(100vh - 60px);
+}
 
+
+@media only screen and (max-width: 580px) {
+
+    main {
+        min-height: calc(100vh - 150px);
+    }
+
+
+}
 /************************************************
 ****************         ************************
 **************  BASIC END  **********************
 ****************         ************************
 ************************************************/
 
-
-
-
-
 /************************************************
 ****************                      ***********
 **************  HEADER - SECTION START  *********
 ****************                      ***********
 ************************************************/
-
 
 header {
     align-items: center;
@@ -126,7 +133,7 @@ header {
 }
 
 .nav_desktop a {
-   align-self: center;
+    align-self: center;
     color: #ebebeb;
     text-decoration: none;
 
@@ -144,13 +151,11 @@ header {
     padding: 51px 23px 51px;
 }
 
-
-@media only screen and (max-width: 1040px){
+@media only screen and (max-width: 1040px) {
 
     header {
         height: 130px;
     }
-
 
     .title {
         padding-left: 20px;
@@ -163,7 +168,6 @@ header {
         padding-left: 20px;
     }
 
-
     .nav_desktop span a {
         font-size: 1.4rem;
         text-align: left;
@@ -171,7 +175,6 @@ header {
         padding: 19px;
         width: 116px;
     }
-
 
     .nav_desktop .active {
         padding: 54px 19px 54px;
@@ -183,13 +186,11 @@ header {
 
 }
 
-
-@media only screen and (max-width: 840px){
+@media only screen and (max-width: 840px) {
 
     header {
         height: 100px;
     }
-
 
     .title {
         padding-left: 20px;
@@ -201,7 +202,6 @@ header {
         font-size: 1em;
     }
 
-
     .nav_desktop span a {
         font-size: 1.1rem;
         text-align: left;
@@ -209,7 +209,6 @@ header {
         padding: 15px;
         width: 92px;
     }
-
 
     .nav_desktop .active {
         padding: 41px 15px 41px;
@@ -221,12 +220,11 @@ header {
 
 }
 
-@media only screen and (max-width: 720px){
+@media only screen and (max-width: 720px) {
 
     header {
         height: 100px;
     }
-
 
     .title {
         padding: 0;
@@ -236,45 +234,186 @@ header {
         display: none;
     }
 
-
     .nav_desktop {
         display: none;
     }
 
+    /********* mobile nav background ****/
+    .mobile_nav_background {
+        top: 100px;
+        filter: opacity(80%);
+        position: absolute;
+        background-color: darkred;
+        height: calc(100vh - 100px);
+        margin-left: -10px;
+        width: 100%;
+        -webkit-transform: translate(-100vw, 0);
+        transform: translate(-100vw, 0);
+        /*transition: transform 0.3s ease;*/
+        display: none;
+    }
+
+    .mobile_nav_background.open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        display: flex;
+    }
+
+    .mobile_login_background {
+        top: 100px;
+        right: 0;
+        filter: opacity(80%);
+        position: absolute;
+        background-color: black;
+        height: calc(100vh - 100px);
+        /*margin-left: -10px;*/
+        width: 100%;
+        -webkit-transform: translate(100vw, 0);
+        transform: translate(100vw, 0);
+        /*transition: transform 0.3s ease;*/
+        display: none;
+    }
+
+    .mobile_login_background.open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        display: flex;
+    }
+
+    /********* mobile nav background ****/
+    /********* mobile nav außen ****/
     .mobile_nav {
+        display: flex;
+        flex-direction: row;
         margin: 0 10px;
-        display: inline-block;
         min-width: 45px;
         min-height: 45px;
-        background: white url("/app/resources/img/menu.svg") no-repeat;
-
+        background: #ebebeb url("../img/menu.svg") no-repeat;
+        border: none;
     }
 
     .mobile_login {
+        display: flex;
+        flex-direction: row;
         margin: 0 10px;
-        display: inline-block;
         min-width: 45px;
         min-height: 45px;
-        background: white url("/app/resources/img/keyhole.svg") no-repeat;
+        background: #ebebeb url("../img/keyhole.svg") no-repeat;
+        border: none;
+    }
 
+    /********* mobile nav außen ****/
+    /********* mobile wrapper ebene ****/
+    .mobile_nav_wrapper {
+        z-index: 99;
+        top: 100px;
+        filter: opacity(100%);
+        width: 300px;
+        height: calc(100vh - 100px);
+        margin-left: -20px;
+        position: absolute;
+        background-color: #141414;
+        border-right: 1px solid #ebebeb;
+        -webkit-transform: translate(-300px, 0);
+        transform: translate(-300px, 0);
+        transition: transform 0.3s ease;
+    }
+
+    .mobile_login_wrapper {
+        z-index: 99;
+        top: 100px;
+        right: 0;
+        filter: opacity(100%);
+        width: 300px;
+        height: calc(100vh - 100px);
+        margin-left: -20px;
+        position: absolute;
+        background-color: #550000;
+        border-left: 1px solid #ebebeb;
+        -webkit-transform: translate(300px, 0);
+        transform: translate(300px, 0);
+        transition: transform 0.3s ease;
+    }
+
+    .mobile_login_wrapper.open,
+    .mobile_nav_wrapper.open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    .mobile_login_wrapper ul,
+    .mobile_nav_wrapper ul {
+        padding-top: 20px;
+    }
+
+    .mobile_nav_wrapper ul li {
+        width: 300px;
+        height: 45px;
+        margin: 16px 0;
+        box-shadow: 0 2px 3px white, -1px -2px 3px white;
+    }
+
+    .mobile_login_wrapper ul li {
+        width: 300px;
+        height: 45px;
+        margin: 16px 0;
+        box-shadow: 1px 2px 3px white, 1px -2px 3px white;
+    }
+
+    .mobile_login_wrapper ul li a,
+    .mobile_nav_wrapper ul li a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: center;
+        width: 300px;
+        height: 45px;
+        font-weight: bolder;
+        color: #ebebeb;
+        text-decoration: none;
+    }
+
+    .mobile_login_wrapper ul li a:hover,
+    .mobile_nav_wrapper ul li a:hover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: center;
+        width: 300px;
+        height: 45px;
+        font-weight: bolder;
+        text-decoration: none;
+        background-color: #ebebeb;
+        color: #141414;
+    }
+
+    ul li a.mobile_active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        vertical-align: center;
+        height: 45px;
+        width: 300px;
+        font-weight: bolder;
+        background-color: #ebebeb;
+        color: #141414;
+        text-decoration: none;
     }
 
 }
+
 /************************************************
 ****************                    *************
 **************  HEADER - SECTION END  ***********
 ****************                    *************
 ************************************************/
 
-
-
-
 /************************************************
 ****************                      ***********
 **************  FOOTER - SECTION START  *********
 ****************                      ***********
 ************************************************/
-
 
 footer {
     z-index: 5;
@@ -303,7 +442,7 @@ footer a {
     color: #ebebeb;
 }
 
-@media only screen and (max-width: 580px){
+@media only screen and (max-width: 580px) {
 
     footer {
         display: flex;
@@ -329,18 +468,14 @@ footer a {
 ****************                    *************
 ************************************************/
 
-
-
-
 /************************************************
 ****************       MAIN        **************
 **************  HOME - SECTION START  ***********
 ****************                    *************
 ************************************************/
 
-
 .hero {
-    background-image: url("/app/resources/img/andrew-welch-229148-unsplash_cr.jpg");
+    background-image: url("../img/andrew-welch-229148-unsplash_cr.jpg");
     background-position: right center;
     background-size: cover;
     background-attachment: fixed;
@@ -374,42 +509,12 @@ footer a {
     padding-bottom: 30px;
 }
 
-.app {
-    background-color: black;
-    padding-top: 190px;
-    padding-bottom: 60px;
-    text-align: center;
-}
 
-.app h1,
-.app h2 {
-    color: #ebebeb;
-    padding-bottom: 30px;
-}
 
-.app video {
-    padding: 40px;
-}
-
-.app_pic {
-    padding-bottom: 40px;
-    width: 750px;
-}
-
-.app_text {
-    color: #ebebeb;
-    padding: 0 50px 50px 50px;
-}
-
-.app_symbole {
-    padding-bottom: 20px;
-    width: 40px;
-}
-
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1200px) {
 
     .hero {
-        background-image: url("/app/resources/img/andrew-welch-229148-unsplash_cr.jpg");
+        background-image: url("../img/andrew-welch-229148-unsplash_cr.jpg");
         display: flex;
         min-height: calc(100vh - 60px);
         justify-content: flex-start;
@@ -446,7 +551,7 @@ footer a {
 
 }
 
-@media only screen and (max-width: 840px){
+@media only screen and (max-width: 840px) {
 
     .hero_mobile {
         margin-top: 100px;
@@ -454,8 +559,7 @@ footer a {
 
 }
 
-
-@media only screen and (max-width: 690px){
+@media only screen and (max-width: 690px) {
 
     .hero_block {
         padding: 50px;
@@ -464,8 +568,7 @@ footer a {
 
 }
 
-
-@media only screen and (max-width: 590px){
+@media only screen and (max-width: 590px) {
 
     .hero_block {
 
@@ -484,7 +587,7 @@ footer a {
 
 }
 
-@media only screen and (max-width: 580px){
+@media only screen and (max-width: 580px) {
 
     .hero {
         min-height: calc(100vh - 150px);
@@ -493,7 +596,223 @@ footer a {
 }
 
 /************************************************
+****************       MAIN       ***************
+**************  HOME - SECTION END  *************
+****************                  **************
+************************************************/
+
+
+
+/************************************************
 ****************       MAIN        **************
-**************  HOME - SECTION START  ***********
+**************  APP - SECTION START  ************
+****************                   **************
+************************************************/
+.app {
+    background-color: black;
+    padding-top: 190px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.app h1,
+.app h2 {
+    color: #ebebeb;
+    padding-bottom: 30px;
+}
+
+.app video {
+    padding: 40px;
+}
+
+.app_pic {
+    padding-bottom: 40px;
+    width: 750px;
+}
+
+.app_text {
+    color: #ebebeb;
+    padding: 0 50px 50px 50px;
+}
+
+.app_symbole {
+    padding-bottom: 20px;
+    width: 40px;
+}
+
+
+@media only screen and (max-width: 750px) {
+
+    .app_pic {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 484px) {
+
+    .app video {
+        box-sizing: border-box;
+        padding: 40px;
+        width: 100%;
+    }
+
+}
+
+
+/************************************************
+****************       MAIN      ****************
+**************  APP - SECTION END  **************
+****************                 ****************
+************************************************/
+
+
+
+
+/************************************************
+****************       MAIN          ************
+**************  LOGIN - SECTION START  **********
+****************                     ************
+************************************************/
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #141414;
+}
+
+.login_form {
+    margin: 160px 0 40px;
+    display: flex;
+    flex-direction: column;
+ width: 500px;
+    background-color: #550000;
+    color: #ebebeb;
+    padding: 80px;
+    box-shadow: 5px 5px 3px gray;
+    border: 1px solid #ebebeb;
+    border-radius: 30px;
+}
+
+
+.login_form h2 {
+    font-size: 2.4rem;
+    padding-bottom: 40px;
+    text-shadow: 4px 4px 4px #141414;
+}
+
+.login_form label {
+    font-size: 1.5rem;
+    display: flex;
+    padding-bottom: 10px;
+
+}
+
+.login_form input {
+    margin-bottom: 30px;
+    background-color: #ebebeb;
+    padding: 10px;
+}
+
+.login_form button {
+    background-color: #ebebeb;
+    border-radius: 40px;
+    padding: 13px
+}
+
+
+@media only screen and (max-width: 530px) {
+    .login {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: #141414;
+    }
+
+
+    .login_form {
+        margin-top: 100px;
+        width: 100%;
+        background-color: #550000;
+        color: #ebebeb;
+        padding: 30px 5px;
+
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+    }
+
+}
+/************************************************
+****************       MAIN        **************
+**************  LOGIN - SECTION END  ************
+****************                   **************
+************************************************/
+
+
+
+
+
+
+
+/************************************************
+****************       MAIN        **************
+**************  SIGN IN - SECTION START  ********
 ****************                    *************
 ************************************************/
+
+
+/************************************************
+****************       MAIN        **************
+**************  SIGN IN - SECTION END  **********
+****************                    *************
+************************************************/
+
+
+
+
+
+
+
+/************************************************
+****************       MAIN        **************
+**************  MAP PEEK - SECTION START  ************
+****************                    *************
+************************************************/
+ .map {
+    height: 100%;
+}
+
+#map {
+    height:100%;
+}
+/************************************************
+****************       MAIN        **************
+**************  MAP PEEK - SECTION END  *********
+****************                    *************
+************************************************/
+
+
+
+
+
+
+
+
+
+/************************************************
+****************       MAIN        **************
+**************  PROFIL - SECTION START  ***********
+****************                    *************
+************************************************/
+
+
+/************************************************
+****************       MAIN        **************
+**************  PROFIL - SECTION START  ***********
+****************                    *************
+************************************************/
+
+
+

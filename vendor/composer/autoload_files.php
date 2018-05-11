@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     '45e8c92354af155465588409ef796dbc' => $vendorDir . '/bcosca/fatfree/lib/base.php',
+    'da253f61703e9c22a5a34f228526f05a' => $vendorDir . '/wixel/gump/gump.class.php',
 );

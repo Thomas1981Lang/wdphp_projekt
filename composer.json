@@ -3,6 +3,7 @@
     "description": "php project",
     "type": "php project",
     "require": {
-        "bcosca/fatfree": "^3.6"
-    }
+        "bcosca/fatfree": "^3.6",
+        "wixel/gump": "dev-master"
+}
 }
