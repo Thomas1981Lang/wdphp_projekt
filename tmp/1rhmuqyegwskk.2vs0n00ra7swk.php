@@ -9,28 +9,53 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" href="/app/resources/css/reset.css">
     <link rel="stylesheet" href="/app/resources/css/style.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+
 </head>
 <body>
 <header>
 
-    <div class="mobile_nav">
-        ddfgsfgsdfg
-    </div>
+    <nav class="mobile_nav">
+
+        <div class="mobile_nav_wrapper">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/apps" class="mobile_active">App</a></li>
+                <li><a href="/sneakpeak">Sneak Peek</a></li>
+            </ul>
+        </div>
+        <div class="mobile_nav_background">
+        </div>
+    </nav>
 
 
     <div class="logo">
         <h1 class="title">Singles a la carte</h1>
-        <h2 class="slogan">für Singles die wissen wo was passiert</h2>
+        <h2 class="slogan">für Singles die wissen wo etwas passiert</h2>
     </div>
 
-    <div class="nav_desktop"><span><a href="/" >Home</a></span><span><a href="/apps" class="active">App</a></span><span><a
-            href="/signin">Sign In</a></span><span><a
-            href="/login">Login</a></span></div>
+    <div class="nav_desktop">
+        <span><a href="/">Home</a></span>
+        <span><a href="/apps" class="active">App</a></span>
+        <span><a href="/sneakpeak">Sneak Peek</a></span>
+        <span><a href="/signin">Sign In</a></span>
+        <span><a href="/login">Login</a></span>
+    </div>
 
 
-    <div class="mobile_login">
-
-        sdfgsdg
+    <nav class="mobile_login">
+        <div class="mobile_login_wrapper">
+            <ul>
+                <li><a href="/signin">Sign In</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </div>
+        <div class="mobile_login_background">
+        </div>
+    </nav>
     </div>
 </header>
 
@@ -62,9 +87,11 @@
 
 <footer>
     <p><a href="https://github.com/Thomas1981Lang" target="_blank">&copy; TL </a></p>
-    <p><span><a href="#">Impressum</a></span><span><a href="#">Nutzungsbedingung</a></span><span><a
+    <p class="imnuda"><span><a href="#">Impressum</a></span><span><a href="#">Nutzungsbedingung</a></span><span><a
             href="#">Datenschutz</a></span></p>
 </footer>
 
+
+<script src="/app/resources/js/singles.js"></script>
 </body>
 </html>

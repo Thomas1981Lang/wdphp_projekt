@@ -22,9 +22,9 @@
 
         <div class="mobile_nav_wrapper">
             <ul>
-                <li><a href="/" class="mobile_active">Home</a></li>
+                <li><a href="/" >Home</a></li>
                 <li><a href="/apps">App</a></li>
-                <li><a href="/sneakpeak">Sneak Peek</a></li>
+                <li><a href="/sneakpeak" class="mobile_active">Sneak Peek</a></li>
             </ul>
         </div>
         <div class="mobile_nav_background">
@@ -38,9 +38,9 @@
     </div>
 
     <div class="nav_desktop">
-        <span><a href="/" class="active">Home</a></span>
+        <span><a href="/" >Home</a></span>
         <span><a href="/apps">App</a></span>
-        <span><a href="/sneakpeak">Sneak Peek</a></span>
+        <span><a href="/sneakpeak" class="active">Sneak Peek</a></span>
         <span><a href="/signin">Sign In</a></span>
         <span><a href="/login">Login</a></span>
     </div>
@@ -59,19 +59,22 @@
     </div>
 </header>
 
-<main class="hero">
-    <div class="hero_mobile">
-        <img src="/app/resources/img/andrew-welch-229148-unsplash_cr.jpg" alt="">
+
+
+<main class="map">
+<div id="map">
+
+
+
+</div>
+    <div>
+        <input id="show-listings" type="button" value="Show Listings">
+        <input id="hide-listings" type="button" value="Essen">
     </div>
-    <section class="hero_block">
-        <h2>Du bist nur noch einem Moment von deinem Abenteuer deines Lebens entfernt.</h2>
-        <h3>Melde dich gleich heute an um spielerisch neue Singles zu entdecken und kennenzulernen.</h3>
-
-    </section>
-
-
-    <div class="push"></div>
 </main>
+
+
+
 
 <footer>
     <p><a href="https://github.com/Thomas1981Lang" target="_blank">&copy; TL </a></p>
@@ -81,5 +84,9 @@
 
 
 <script src="/app/resources/js/singles.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfDcni1n3TXcLUUV164qDutKiaWwRDR0I&v=3&callback=initMap">
+</script>
+
 </body>
 </html>

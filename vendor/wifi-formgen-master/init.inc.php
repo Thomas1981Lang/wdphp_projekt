@@ -1,7 +1,7 @@
 <?php
 define ('PROJECT_ROOT', __DIR__ . '/');
 
-require_once 'GUMP/gump.class.php';
+require_once '../wixel/GUMP/gump.class.php';
 
 function formLibAutoLoad ($className) {
 	// Unix/Linux
@@ -15,3 +15,5 @@ function formLibAutoLoad ($className) {
 }
 
 spl_autoload_register('formLibAutoLoad');
+
+require_once 'form-conf.php';

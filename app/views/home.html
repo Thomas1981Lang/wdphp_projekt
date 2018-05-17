@@ -18,14 +18,18 @@
 <body>
 <header>
 
-    <div class="mobile_nav">
+    <nav class="mobile_nav">
+
         <div class="mobile_nav_wrapper">
             <ul>
-                <li>Home</li>
-                <li>App</li>
+                <li><a href="/" class="mobile_active">Home</a></li>
+                <li><a href="/apps">App</a></li>
+                <li><a href="/sneakpeak">Sneak Peek</a></li>
             </ul>
         </div>
-    </div>
+        <div class="mobile_nav_background">
+        </div>
+    </nav>
 
 
     <div class="logo">
@@ -33,18 +37,25 @@
         <h2 class="slogan">für Singles die wissen wo etwas passiert</h2>
     </div>
 
-    <div class="nav_desktop"><span><a href="/" class="active">Home</a></span><span><a
-            href="/apps">App</a></span><span><a href="/signin">Sign In</a></span><span><a href="/login">Login</a></span>
+    <div class="nav_desktop">
+        <span><a href="/" class="active">Home</a></span>
+        <span><a href="/apps">App</a></span>
+        <span><a href="/sneakpeak">Sneak Peek</a></span>
+        <span><a href="/signin">Sign In</a></span>
+        <span><a href="/login">Login</a></span>
     </div>
 
 
-    <div class="mobile_login">
+    <nav class="mobile_login">
         <div class="mobile_login_wrapper">
             <ul>
-                <li>Sign In</li>
-                <li>Login</li>
+                <li><a href="/signin">Sign In</a></li>
+                <li><a href="/login">Login</a></li>
             </ul>
         </div>
+        <div class="mobile_login_background">
+        </div>
+    </nav>
     </div>
 </header>
 
@@ -69,13 +80,6 @@
 </footer>
 
 
-<script>
-    $(document).ready(function () {
-
-
-
-
-    });
-</script>
+<script src="/app/resources/js/singles.js"></script>
 </body>
 </html>

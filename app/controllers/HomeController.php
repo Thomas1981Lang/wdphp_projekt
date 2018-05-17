@@ -1,6 +1,6 @@
 <?php
 
-class MainController extends Controller
+class HomeController extends Controller
 {
 
     function beforeroute()
@@ -15,11 +15,6 @@ class MainController extends Controller
         echo $home->render('home.html');
     }
 
-    function app()
-    {
-        $app = new Template;
-        echo $app->render('app.html');
-    }
 
 
 }

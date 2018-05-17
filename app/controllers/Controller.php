@@ -7,10 +7,7 @@ class Controller
 
     function beforeroute()
     {
-        if($this->f3->get('SESSION.user') === null ) {
-            $this->f3->reroute('/login');
-            exit;
-        }
+        $this->sessionCheck();
     }
 
     function afterroute()
@@ -34,4 +31,12 @@ class Controller
     }
 
 
+    function sessionCheck () {
+        if($this->f3->get('SESSION.user') === null ) {
+            $this->f3->reroute('/login');
+            exit;
+        }
+    }
+
 }
+

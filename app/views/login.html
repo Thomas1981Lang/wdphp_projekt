@@ -15,18 +15,16 @@
             crossorigin="anonymous"></script>
 
 </head>
-
 <body>
 <header>
-
 
     <nav class="mobile_nav">
 
         <div class="mobile_nav_wrapper">
             <ul>
-                <li><a href="/" class="mobile_active">Home</a></li>
-                <li><a href="/app">App</a></li>
-                <li><a href="/sneak">Sneak Peek</a></li>
+                <li><a href="/" >Home</a></li>
+                <li><a href="/apps">App</a></li>
+                <li><a href="/sneakpeak">Sneak Peek</a></li>
             </ul>
         </div>
         <div class="mobile_nav_background">
@@ -39,24 +37,26 @@
         <h2 class="slogan">für Singles die wissen wo etwas passiert</h2>
     </div>
 
-    <nav class="nav_desktop">
-        <span><a href="/">Home</a></span>
-        <span><a href="/app">App</a></span>
+    <div class="nav_desktop">
+        <span><a href="/" >Home</a></span>
+        <span><a href="/apps">App</a></span>
+        <span><a href="/sneakpeak">Sneak Peek</a></span>
         <span><a href="/signin">Sign In</a></span>
         <span><a href="/login" class="active">Login</a></span>
-    </nav>
+    </div>
 
 
     <nav class="mobile_login">
         <div class="mobile_login_wrapper">
             <ul>
                 <li><a href="/signin">Sign In</a></li>
-                <li><a href="/login">Login</a></li>
+                <li><a href="/login" class="mobile_active">Login</a></li>
             </ul>
         </div>
         <div class="mobile_login_background">
         </div>
     </nav>
+    </div>
 </header>
 
 
