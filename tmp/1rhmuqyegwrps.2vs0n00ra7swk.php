@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SINGLES A LA CARTE</title>
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700" rel="stylesheet">
@@ -22,8 +24,8 @@
     </div>
 
     <div class="nav_desktop"><span><a href="/" >Home</a></span><span><a href="/apps" class="active">App</a></span><span><a
-            href="">Sign In</a></span><span><a
-            href="">Login</a></span></div>
+            href="/signin">Sign In</a></span><span><a
+            href="/login">Login</a></span></div>
 
 
     <div class="mobile_login">

@@ -61,34 +61,8 @@
 
 
 <main class="login">
-
-    <?php
-    require_once '/vendor/form/init.php';
-    $form = new \Formgen\Form($conf);
-
-    if ($form->isSent()) {
-        $validData = $form->isValid();
-        if (!$validData) {
-            echo $form->render();
-        }
-        else {
-            if ($validData['user'] === 'Test' && $validData['passwort'] === "test12") {
-                header('Location: todo.php');
-            } else {
-                echo '<p>BN oder PW falsch!</p>';
-                echo $form->render();
-            }
-
-        }
-    }
-    else {
-        echo $form->render();
-    }
-
-
-    ?>
+    {{ @$output | raw }}
 </main>
-
 
 <footer>
     <p><a href="https://github.com/Thomas1981Lang" target="_blank">&copy; TL </a></p>

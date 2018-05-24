@@ -15,16 +15,18 @@
             crossorigin="anonymous"></script>
 
 </head>
+
 <body>
 <header>
+
 
     <nav class="mobile_nav">
 
         <div class="mobile_nav_wrapper">
             <ul>
                 <li><a href="/" class="mobile_active">Home</a></li>
-                <li><a href="/apps">App</a></li>
-                <li><a href="/sneakpeak">Sneak Peek</a></li>
+                <li><a href="/app">App</a></li>
+                <li><a href="/sneak">Sneak Peek</a></li>
             </ul>
         </div>
         <div class="mobile_nav_background">
@@ -37,13 +39,12 @@
         <h2 class="slogan">für Singles die wissen wo etwas passiert</h2>
     </div>
 
-    <div class="nav_desktop">
-        <span><a href="/" class="active">Home</a></span>
-        <span><a href="/apps">App</a></span>
-        <span><a href="/sneakpeak">Sneak Peek</a></span>
+    <nav class="nav_desktop">
+        <span><a href="/">Home</a></span>
+        <span><a href="/app">App</a></span>
         <span><a href="/signin">Sign In</a></span>
-        <span><a href="/login">Login</a></span>
-    </div>
+        <span><a href="/login" class="active">Login</a></span>
+    </nav>
 
 
     <nav class="mobile_login">
@@ -56,22 +57,27 @@
         <div class="mobile_login_background">
         </div>
     </nav>
-    </div>
 </header>
 
-<main class="hero">
-    <div class="hero_mobile">
-        <img src="/app/resources/img/andrew-welch-229148-unsplash_cr.jpg" alt="">
-    </div>
-    <section class="hero_block">
-        <h2>Du bist nur noch einem Moment von deinem Abenteuer deines Lebens entfernt.</h2>
-        <h3>Melde dich gleich heute an um spielerisch neue Singles zu entdecken und kennenzulernen.</h3>
-
-    </section>
 
 
-    <div class="push"></div>
+
+<main class="login">
+
+    <form class="login_form" method="post" action="/authenticate">
+        <h2>Login</h2>
+        <label for="username" class="">Username</label>
+        <input type="text" id="username" name="username" class="" placeholder="Username" autofocus="">
+        <label for="password" class="sr-only">Password</label>
+        <input type="password" id="password" name="password" class="" placeholder="Password">
+        <button class="" type="submit">Login</button>
+    </form>
+
 </main>
+
+
+
+
 
 <footer>
     <p><a href="https://github.com/Thomas1981Lang" target="_blank">&copy; TL </a></p>
@@ -80,6 +86,6 @@
 </footer>
 
 
-<script src="/app/resources/js/singles.js"></script>
+<script src="resources/js/singles.js"></script>
 </body>
 </html>
